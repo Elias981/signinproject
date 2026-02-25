@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { signInUser, signUpNewUser } from "./action";
+import { signInUser, signUpNewUser, signOutUser } from "./action";
 
 export default function Page() {
   const [loginHover, setLoginHover] = useState(false);
@@ -10,6 +10,13 @@ export default function Page() {
   const [signUpActive, setSignUpActive] = useState(false);
 
   return (
+    <>  
+    <div>
+        <form action={signOutUser}>
+          <button type="submit">Log out</button>
+        </form>
+
+      </div>
     <main
       style={{
         minHeight: "100vh",
@@ -19,6 +26,7 @@ export default function Page() {
         padding: "1.5rem",
       }}
     >
+      
       <div
         style={{
           display: "flex",
@@ -181,5 +189,6 @@ export default function Page() {
         </form>
       </div>
     </main>
+    </>
   );
 }
