@@ -15,8 +15,7 @@ export default function Page() {
         <form action={signOutUser}>
           <button type="submit">Log out</button>
         </form>
-
-      </div>
+    </div>
     <main
       style={{
         minHeight: "100vh",
